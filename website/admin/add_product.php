@@ -17,10 +17,10 @@
 
     $s_temp_name = $_FILES['simage']['tmp_name'];
     $m_temp_name = $_FILES['mimage']['tmp_name'];
-    $stype = $_FILES['simage']['type'];
-    $stype = substr($stype,6);
-    $mtype = $_FILES['mimage']['type'];
-    $mtype = substr($mtype,6);
+    // $stype = $_FILES['simage']['type'];
+    // $stype = substr($stype,6);
+    // $mtype = $_FILES['mimage']['type'];
+    // $mtype = substr($mtype,6);
     
     $itemcode = mysqli_real_escape_string($databaseconnect,$_POST['itemcode']);
     $price = mysqli_real_escape_string($databaseconnect,$_POST['price']);
@@ -36,8 +36,8 @@
     }else{
       $upload_to = 'assist/img/products/';
 
-      $s_img_path = $upload_to.$itemcode.'.'.$stype;
-      $m_img_path = $upload_to.$itemcode.'_m.'.$mtype;
+      $s_img_path = $upload_to.$itemcode.'.jpeg';
+      $m_img_path = $upload_to.$itemcode.'_m.jpeg';
 
       $s_file_uploaded = move_uploaded_file($s_temp_name, $s_img_path);
       $m_file_uploaded = move_uploaded_file($m_temp_name, $m_img_path);
@@ -90,10 +90,10 @@
             <p>
             Note :<textarea name="note" rows="3" placeholder="Note"></textarea></p><br>
             <p>
-            Saree Image :<input type="file" accept="image/*" onchange="picf1(event)" name="simage" required>
+            Saree Image :<input type="file" accept="image/jpeg" onchange="picf1(event)" name="simage" required><br>(Only jpeg)
               <img id="pic1"/></p><br>
             <p>
-            Material Image :<input width="70%" type="file" accept="image/*" onchange="picf2(event)" name="mimage" required>
+            Material Image :<input width="70%" type="file" accept="image/jpeg" onchange="picf2(event)" name="mimage" required><br>(Only jpeg)
               <img id="pic2"/></p><br>
             <button class="mainbutton" type= "submit" name="submit">Save</button>
 
