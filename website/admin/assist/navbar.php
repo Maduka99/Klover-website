@@ -17,6 +17,7 @@
         <a href="#">Order history</a>
       </div>
     </li>
+    <li><a href="delivery.php">Delivery</a></li>
     <div class="right">
     <li><a href="logout.php">Logout</a></li></div>
   </ul>
