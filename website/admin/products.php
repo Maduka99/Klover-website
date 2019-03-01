@@ -37,6 +37,7 @@ if($count){
 	<title>Products</title>
 
 	<link href="assist/css/css.css" rel="stylesheet" type="text/css">
+	<meta http-equiv="Cache-control" content="no-cache">
 
 	<style>
 table, th, td {
@@ -64,6 +65,7 @@ th, td {
 	    <th>Note</th>
 	    <th>Saree Image</th> 
 	    <th>Material Image</th>
+	    <th></th>
 	  </tr>
 	  <?php for ($i=0; $i < sizeof($product); $i++) { 
 	  	echo "<tr>
@@ -72,6 +74,7 @@ th, td {
 	    <td>".$product[$i]['note']."</td>
 	    <td><img src='".$product[$i]['simage']."' height = '200px'></td>
 	    <td><img src='".$product[$i]['mimage']."'  height = '200px'></td>
+	    <td><button type='button'><a href='edit_product.php?icode=".$product[$i]['itemcode']."'>Edit</a></button></td> 
 	  </tr>";
 	  } ?>
 	  

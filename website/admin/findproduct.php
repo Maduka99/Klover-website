@@ -74,6 +74,7 @@ th, td {
 			    <th>Note</th>
 			    <th>Saree Image</th> 
 			    <th>Material Image</th>
+			    <th></th>
 			  </tr>
 			  <tr>
 			    <td>".$row['itemcode']."</td>
@@ -81,6 +82,7 @@ th, td {
 			    <td>".$row['note']."</td>
 			    <td><img src='".$row['simage']."' height = '200px'></td>
 			    <td><img src='".$row['mimage']."'  height = '200px'></td>
+			    <td><button type='button'><a href='edit_product.php?icode=".$row['itemcode']."'>Edit</a></button></td> 
 			  </tr>
 			  
 			</table>
